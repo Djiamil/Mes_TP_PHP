@@ -46,7 +46,7 @@
         return false;
     }
     function datSuivant($jour,$moi,$anne){
-        if(dateValide($jour,$moi,$anne)==true)
+        if(dateValide($jour,$moi,$anne)==true){
             if ($jour<nombreJour($moi,$anne)){
                 return ($jour+1)."/".$moi."/".$anne;
             }if($moi<12){
@@ -54,7 +54,23 @@
             }else{
                  return 1.1.($anne+1);
             }
+        }    
         
     }
-    echo datSuivant(31,1,2020);
+
+
+
+
+    function datPrecedent($jour,$moi,$anne){
+        if(dateValide($jour,$moi,$anne)==true){
+            if ($jour>1){
+                return ($jour-1)."/".$moi."/".$anne;
+            }if(($jour==1) &&($moi>1)){
+                 return "1/".($moi-1)."/".$anne;
+            }else{
+                 return nombreJour($moi,$anne)."12/".($anne-1);
+            }
+        }    
+        
+    }
 ?>

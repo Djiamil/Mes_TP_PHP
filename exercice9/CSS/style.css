@@ -1,0 +1,33 @@
+
+.conteneur{
+    background-image: url(developpeur-web-portage-salarial.jpg);
+
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border: 1em solid black;
+}
+header{
+    border: 1em solid red;
+    display: flex;
+    flex:8;
+    justify-content: center;
+    align-items: center;
+}
+.lesbouton{
+    border:1em solid rebeccapurple;
+    display: flex;
+    flex:3;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    margin: 5em;
+    width: 20em;
+    height: 2em;
+
+}
+input value{
+    font-size: 5em;
+}
